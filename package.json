@@ -1,7 +1,7 @@
 {
   "name": "mongoose-multi-db",
   "version": "1.0.0",
-  "description": "This library aims to facilitate the management of multiple mongoose database connections for the same model.",
+  "description": "This library aims to facilitate the management of multiple mongoose database connections for the same model",
   "main": "index.js",
   "scripts": {
     "test": "node example/usage.js"
@@ -10,8 +10,4 @@
   "license": "ISC",
   "dependencies": {
     "mongoose": "^5.9.28"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
-}
