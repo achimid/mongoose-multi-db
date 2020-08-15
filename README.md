@@ -143,6 +143,9 @@ O retorno da função *one()* é uma [Promisse](https://developer.mozilla.org/pt
 
 #### raw()
 
+
+### Mais exemplo de utilização
+
 ```javascript
 const Model = require('./model')
 
@@ -171,11 +174,6 @@ const main = async () => {
 
 main()
 ```
-
-
-### Mais exemplo de utilização
-
-
 
 
 ## Detalhes
