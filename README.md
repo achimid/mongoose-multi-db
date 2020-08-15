@@ -141,7 +141,36 @@ O retorno da função *one()* é uma [Promisse](https://developer.mozilla.org/pt
 
 #### many()
 
+
+Devo utilizar a função *many()* quando quero realizar uma operação que tenha uma lista de retorno. Veja o exemplo de utilização abaixo, onde o objetivo é recuperar um documento utilizando a função `find`:
+
+Utilizando **mongoose-multi-db**:
+```javascript
+const personList = await Model.one(Person => Person.find())
+```
+
+Utilizando **mongoose**:
+```javascript
+const personList = await Model.find()
+```
+
+O retorno da função *many()* é uma lista de [Promisse](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolvida. Como argumento do callback você receberá um [*Mongoose Model*](https://mongoosejs.com/docs/models.html) de cada banco de dados, no exemplo: `Person`, e você deve realizar a operação desejada com este *Model*.
+
 #### raw()
+
+Devo utilizar a função *many()* quando quero realizar uma operação que tenha uma lista de retorno. Veja o exemplo de utilização abaixo, onde o objetivo é recuperar um documento utilizando a função `find`:
+
+Utilizando **mongoose-multi-db**:
+```javascript
+const personDeleted = Model.raw(Person => Person.deleteOne({_id: '123'}))
+```
+
+Utilizando **mongoose**:
+```javascript
+const personList = await Model.deleteOne({_id: '123'})
+```
+
+O retorno da função *many()* é uma lista de [Promisse](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolvida, de todas as execuções dos comandos nos bancos de dados, podendo incluir items nullos.
 
 
 ### Mais exemplo de utilização
