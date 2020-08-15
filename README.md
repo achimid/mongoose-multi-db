@@ -5,7 +5,7 @@ Esta biblioteca tem como objetivo facilitar o gerenciamento de multiplas conexõ
 
 Criei essa biblioteca devido a uma limitação que havia em meus projetos pessoais que utilizavam um serviço de banco de dados [MongoDB](https://pt.wikipedia.org/wiki/MongoDB), sendo a versão grátis fornecido pela [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), com um limite de 512MB de espaço para a conta grátis.
 
-Com a utilização do [mongoose-multi-db](https://github.com/achimid/mongoose-multi-db) como camada de abstração é possivel efetuar o balanceamento os dados em multiplos bancos de dados configurados em seu projeto. Isso inclui os principais comandos disponibilidados pela biblioteca mongoose.
+Com a utilização do [mongoose-multi-db](https://github.com/achimid/mongoose-multi-db) como camada de abstração é possivel efetuar o balanceamento os dados em multiplos bancos de dados configurados em seu projeto. Isso inclui as principais operações disponibilidadas pela biblioteca mongoose.
 
 
 
@@ -174,6 +174,8 @@ O retorno da função *many()* é uma lista de [Promisse](https://developer.mozi
 
 
 ### Mais exemplo de utilização
+
+Você pode encontrar o exemplo completo na pasta [example](https://github.com/achimid/mongoose-multi-db/tree/master/example) deste repositorio
 
 ```javascript
 const Model = require('./model')

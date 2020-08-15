@@ -8,7 +8,15 @@
   },
   "author": "achimid",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achimid/mongoose-multi-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/achimid/mongoose-multi-db/issues"
+  },
+  "homepage": "https://github.com/achimid/mongoose-multi-db#readme",
   "dependencies": {
     "mongoose": "^5.9.28"
-  }
+  }  
 }
