@@ -1,4 +1,4 @@
-const mongoose = require('../index')
+const mongoose = require('../mongoose-multi-db')
 
 const schema = mongoose.Schema({    
     name: { type: String }, 
