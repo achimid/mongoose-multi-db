@@ -43,11 +43,37 @@ const model = (collection, schema, config) => {
     
     const get = (data) => selectedModel.model(data)
     
+
     const raw = (callback) => Promise.all(models.map(callback))
 
     const one = (callback) => raw(callback).then(filter)
     
     const many = (callback) => raw(callback).then(join)
+
+
+
+    const create = (data) => selectedModel.model.create(data)
+    
+    const insertMany = (data) => selectedModel.model.insertMany(data)
+
+    const findById = (_id) => one(Model => Model.findById(_id))
+
+    const findOne = (_doc) => one(Model => Model.findOne(_doc))
+
+    const deleteOne = (_doc) => raw(Model => Model.deleteOne(_doc))
+
+    const deleteMany = (_doc) => raw(Model => Model.deleteMany(_doc))
+
+    const findByIdAndUpdate = (_id, _doc) => one(Person => Person.findByIdAndUpdate(_id, _doc))
+
+    const findAll = () => many(Model => Model.find())
+    const find = (_doc) => many(Model => Model.find(_doc))
+
+    const findAllLean = () => many(Model => Model.find().lean())
+    const findLean = (_doc) => many(Model => Model.find(_doc).lean())
+
+
+
 
     setInterval(selectSmallDB, conf.helthcheck.interval)
 
@@ -56,6 +82,18 @@ const model = (collection, schema, config) => {
         one,
         many,
         raw,
+        
+        create,
+        insertMany,
+        findById,
+        findOne,
+        deleteOne,
+        deleteMany,
+        findByIdAndUpdate,
+        findAll,
+        find,
+        findAllLean,
+        findLean
     }
 }
 
